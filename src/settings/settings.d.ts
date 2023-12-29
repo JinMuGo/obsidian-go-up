@@ -1,0 +1,3 @@
+interface PluginSettings {
+	addUpWhenCreated: boolean;
+  }
