@@ -34,7 +34,8 @@ export default class goUp extends Plugin {
 		this.app.vault.on("create", async (file: TFile) => {
 			if (
 				file instanceof TFolder ||
-				this.settings.addUpWhenCreated === false
+				this.settings.addUpWhenCreated === false ||
+				file.basename.startsWith("Untitled")
 			)
 				return;
 			createUpProperty(this.app, file);
